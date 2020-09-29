@@ -39,6 +39,8 @@ fi
 
 
 bundle lock --update
+bundle update --gemfile ui/Gemfile
+bundle update --gemfile server/Gemfile
 bundle diff -f md_table
 BUNDLE_DIFF="$(bundle diff -f md_table)"
 
