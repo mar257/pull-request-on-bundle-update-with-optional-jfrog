@@ -57,9 +57,8 @@ git config --global user.email $GIT_EMAIL
 
 if [[ -n "$INPUT_YARN_UPGRADE" ]]; then
   export NPM_TOKEN=$INPUT_NPM_TOKEN
-  yarn
-  yarn upgrade
-  hub add yarn.lock
+  yarn install --cwd ui
+  yarn upgrade --cwd ui
 fi
 
 hub add -A
