@@ -62,7 +62,7 @@ if [[ -n "$INPUT_YARN_UPGRADE" ]]; then
   hub add yarn.lock
 fi
 
-hub add Gemfile Gemfile.lock
+hub add -A
 hub commit -m "dependency updates ✨"
 hub push origin ${BRANCH_NAME}
 
